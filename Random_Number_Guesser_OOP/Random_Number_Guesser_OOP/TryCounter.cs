@@ -8,5 +8,6 @@ namespace Random_Number_Guesser_OOP
 {
     internal class TryCounter
     {
+        public int counter { get; set; } = 0;
     }
 }
