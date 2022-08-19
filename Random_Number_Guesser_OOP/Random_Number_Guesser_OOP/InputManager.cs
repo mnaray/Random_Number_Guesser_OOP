@@ -27,6 +27,7 @@ namespace Random_Number_Guesser_OOP
                 {
                     // if input is a number, it gets converted
                     number = Convert.ToInt32(input);
+                    CheckGuess();
                 }
                 else if (input == "exit")
                 {
@@ -44,7 +45,7 @@ namespace Random_Number_Guesser_OOP
         {
             return numberGenerator.currentNumber;
         }
-        
+
         public void CheckGuess()
         {
             // if the guess matches the number, it returns true
@@ -52,10 +53,46 @@ namespace Random_Number_Guesser_OOP
             if (number == GetCurrentInt())
             {
                 hintManager.OnRightAnswer();
+                RequestRestart();
             }
             else
             {
-                hintManager.OnWrongAnswer();
+                hintManager.OnWrongAnswer(number, GetCurrentInt());
+            }
+        }
+
+        private void RequestRestart()
+        {
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Would you like to restart the game? [y|n]");
+                    string response = Console.ReadLine();
+
+                    switch (response)
+                    {
+                        case "exit":
+                        case "n":
+                            isRunning = false;
+                            break;
+
+                        case "y":
+                            // the old number generator gets replaced
+                            // this way the number to guess doesn't stay the same
+                            numberGenerator = new NumberGenerator();
+                            break;
+
+                        default:
+                            throw new Exception();
+                    }
+
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please enter a valid argument.\n");
+                }
             }
         }
 
