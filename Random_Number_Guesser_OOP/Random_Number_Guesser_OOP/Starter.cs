@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Random_Number_Guesser_OOP
 {
-    internal class InputManager
+    internal class Starter
     {
         public static void Main(string[] args)
         {
