@@ -18,7 +18,7 @@ namespace Random_Number_Guesser_OOP
         private int GenerateNumber()
         {
             Random r = new Random();
-            return r.Next();
+            return r.Next(1, 101);
         }
     }
 }
