@@ -11,6 +11,7 @@ namespace Random_Number_Guesser_OOP
         public static void Main(string[] args)
         {
             InputManager inputManager = new InputManager();
+            inputManager.Listen();
         }
     }
 }
