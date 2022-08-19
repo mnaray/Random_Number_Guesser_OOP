@@ -13,7 +13,7 @@ namespace Random_Number_Guesser_OOP
         ErrorHandler errorHandler = new ErrorHandler();
 
         bool isRunning = true;
-        string input = "";
+        string? input = "";
         int number;
 
 
@@ -36,7 +36,7 @@ namespace Random_Number_Guesser_OOP
                 }
                 else
                 {
-                    // this code gets called if input is not recognized
+                    errorHandler.Error(0);
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace Random_Number_Guesser_OOP
                 try
                 {
                     Console.WriteLine("Would you like to restart the game? [y|n]");
-                    string response = Console.ReadLine();
+                    string? response = Console.ReadLine();
 
                     switch (response)
                     {
