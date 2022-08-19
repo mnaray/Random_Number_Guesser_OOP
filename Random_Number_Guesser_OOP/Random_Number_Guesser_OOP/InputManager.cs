@@ -9,6 +9,9 @@ namespace Random_Number_Guesser_OOP
     internal class InputManager
     {
         NumberGenerator numberGenerator = new NumberGenerator();
+        HintManager hintManager = new HintManager();
+        ErrorHandler errorHandler = new ErrorHandler();
+
         bool isRunning = true;
         string input = "";
         int number;
@@ -41,18 +44,18 @@ namespace Random_Number_Guesser_OOP
         {
             return numberGenerator.currentNumber;
         }
-
-        public bool CheckGuess()
+        
+        public void CheckGuess()
         {
             // if the guess matches the number, it returns true
             // otherwise it will return false
             if (number == GetCurrentInt())
             {
-                return true;
+                hintManager.OnRightAnswer();
             }
             else
             {
-                return false;
+                hintManager.OnWrongAnswer();
             }
         }
 
