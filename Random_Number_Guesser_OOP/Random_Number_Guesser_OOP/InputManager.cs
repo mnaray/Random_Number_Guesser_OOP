@@ -19,8 +19,15 @@ namespace Random_Number_Guesser_OOP
 
         public void Listen()
         {
+            // instructions
+            Console.WriteLine("Your job is to find a secret number that has been generated randomly.\n" +
+                "The number is a natural number in the range of 1-100. (no decimals or negatives)\n" +
+                "Start guessing by simply entering a number in that range and pressing <ENTER>.\n" +
+                "Type \"exit\" at any time to quit the game.\n");
+
             while (isRunning)
             {
+                Console.Write("Enter your guess (or exit): ");
                 input = Console.ReadLine();
 
                 if (int.TryParse(input, out int _))
@@ -74,7 +81,7 @@ namespace Random_Number_Guesser_OOP
             {
                 try
                 {
-                    Console.WriteLine("Would you like to restart the game? [y|n]");
+                    Console.Write("Would you like to restart the game? [y|n] : ");
                     string? response = Console.ReadLine();
 
                     switch (response)
@@ -88,6 +95,7 @@ namespace Random_Number_Guesser_OOP
                             // the old number generator gets replaced
                             // this way the number to guess doesn't stay the same
                             numberGenerator = new NumberGenerator();
+                            Console.WriteLine(Environment.NewLine);
                             break;
 
                         default:

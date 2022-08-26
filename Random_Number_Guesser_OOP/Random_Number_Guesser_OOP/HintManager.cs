@@ -21,11 +21,11 @@ namespace Random_Number_Guesser_OOP
         {
             if (number > currentInt)
             {
-                Console.WriteLine("Your guess was greater than the secret number. Try again.");
+                Console.WriteLine("Your guess was greater than the secret number. Try again.\n");
             }
             else
             {
-                Console.WriteLine("Your guess was below the the secret number. Try again.");
+                Console.WriteLine("Your guess was below the the secret number. Try again.\n");
             }
 
             // counts up every time there's a wrong guess
