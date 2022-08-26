@@ -27,7 +27,14 @@ namespace Random_Number_Guesser_OOP
                 {
                     // if input is a number, it gets converted
                     number = Convert.ToInt32(input);
-                    CheckGuess();
+                    if (number >= 1 && number <= 100)
+                    {
+                        CheckGuess();
+                    }
+                    else
+                    {
+                        errorHandler.Error(1);
+                    }
                 }
                 else if (input == "exit")
                 {
