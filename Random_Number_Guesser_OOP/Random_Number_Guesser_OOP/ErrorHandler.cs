@@ -16,7 +16,8 @@ namespace Random_Number_Guesser_OOP
                     Console.WriteLine("We don't recognize the input. Try something else.");
                     break;
                 case 1:
-                    Console.WriteLine("Please try guessing in the possible range of 1-100.");
+                    Console.WriteLine("Please try guessing in the possible range of 1-100." +
+                        "Only natural numbers get accepted. (no decimals or negatives)");
                     break;
                 default:
                     Console.WriteLine("We don't know what happened.\n" +
