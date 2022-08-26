@@ -25,7 +25,7 @@ namespace Random_Number_Guesser_OOP
             }
             else
             {
-                Console.WriteLine("Your guess below the the secret number. Try again.");
+                Console.WriteLine("Your guess was below the the secret number. Try again.");
             }
 
             // counts up every time there's a wrong guess
