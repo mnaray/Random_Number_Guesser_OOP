@@ -1,5 +1,5 @@
 # Random_Number_Guesser_OOP
-This is the "specifically" object oriented version of my original Random Number Guesser from the previous year of school.
+This is the object oriented version of my original Random Number Guesser from the previous year of school.
 
 ### Explanation
 Last year we made the same project, but only with the help of the Program class.  
