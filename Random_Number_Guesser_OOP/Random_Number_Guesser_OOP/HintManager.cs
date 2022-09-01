@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Random_Number_Guesser_OOP
 {
-    internal class HintManager
+    public class HintManager
     {
         TryCounter tryCounter = new TryCounter();
 
